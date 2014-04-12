@@ -95,22 +95,22 @@ Code references:
        /**
         * @param \App\Models\Book $instance
         */
-       protected function afterUpdateSuccess($instance) {
-           $instance->setAuthors($this->getParam('bookauthors'));
-       }
+        protected function afterUpdateSuccess($instance) {
+            $instance->setAuthors($this->getParam('bookauthors'));
+        }
    ```
 3. _editForm.tpl View
    ```Smarty
-       <div class="row-form">
-           <div class="span2"><label for="roomamenities">Amenities:</label></div>
-           <div class="span10">
-               <select name="roomamenities[]" id="roomamenities" multiple="multiple" class="msc">
-                   {foreach from=$allAmenities item=amenity}
-                       <option value="{$amenity.id}" {if (in_array($amenity.id, $roomamenities))}selected{/if} >{$amenity.title|translate:"en"}</option>
-                   {/foreach}
-               </select>
-           </div>
+   <div class="row-form">
+   <div class="span2"><label for="roomamenities">Amenities:</label></div>
+       <div class="span10">
+           <select name="roomamenities[]" id="roomamenities" multiple="multiple" class="msc">
+               {foreach from=$allAmenities item=amenity}
+                   <option value="{$amenity.id}" {if (in_array($amenity.id, $roomamenities))}selected{/if} >{$amenity.title|translate:"en"}</option>
+               {/foreach}
+           </select>
        </div>
+   </div>
    ```
 
 ### Cron
