@@ -43,7 +43,7 @@ class CRUDController extends BaseController
     // -- END - SORTABLE -- //
 
     public $columns = array('column', 'names');
-    public $thAttributes = array(); // Class sort_asc or sort_dsc can be used to set default sorting.
+    public $thAttributes = array(); // Class sort_asc or sort_desc can be used to set default sorting.
     public $columnDefs = '[]'; // Use this to handle columns' behaviours, doc: http://www.datatables.net/usage/columns
 
 
