@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Created by Trio Design Team (jay@tgitriodesign.com).
+ * Date: 1/27/14
+ * Time: 11:57 AM
+ */
 
 namespace App\Controllers\Admin;
 
@@ -27,7 +31,7 @@ class CRUDController extends BaseController
 
     // If you don't want to create deleteForm.tpl. define this instead.
     // Sample value: instances/destroy
-    protected $destroyPath = 'admin/addresses/destroy';
+    protected $destroyPath = 'instances/destroy';
 
     // -- SORTABLE -- //
     // If dataTable items are sortable, set this to field name in database corresponds with dragging
@@ -40,7 +44,7 @@ class CRUDController extends BaseController
 
     public $columns = array('column', 'names');
     public $thAttributes = array(); // Class sort_asc or sort_dsc can be used to set default sorting.
-    public $columnDefs = ''; // Use this to handle columns' behaviours, doc: http://www.datatables.net/usage/columns
+    public $columnDefs = '[]'; // Use this to handle columns' behaviours, doc: http://www.datatables.net/usage/columns
 
 
     // Minimum overriding requirements //
@@ -73,6 +77,24 @@ class CRUDController extends BaseController
         return $instanceRows;
     }
 
+    /**
+     * Override as needed
+     * @param $instance
+     */
+    protected function afterCreateSuccess($instance)
+    {
+
+    }
+
+    /**
+     * Override as needed
+     * @param $instance
+     */
+    protected function afterUpdateSuccess($instance)
+    {
+
+    }
+
     // END - Minimum overriding requirements //
 
     /**
@@ -82,7 +104,7 @@ class CRUDController extends BaseController
      */
     protected function listActions($instanceArray)
     {
-        $actions = array('data' => '<a title="View" href="'.$this->app->getRouter()->getUrl($this->editPath, array('id' => $instanceArray['id'])).'" data-toggle="dialog"><span class="icon-eye-open"></span></a>
+        $actions = array('data' => '<a title="View" href="'.$this->app->getRouter()->getUrl($this->editPath, array('id' => $instanceArray['id'])).'" data-toggle="dialog"><span class="icon-pencil"></span></a>
 					<a title="Delete" href="'.$this->app->getRouter()->getUrl($this->deletePath, array('id' => $instanceArray['id'])).'" data-toggle="dialog"><span class="icon-trash"></span></a>', 'class' => 'TAC');
         if (!is_null($this->dragField)) {
             $actions['data'] .='<input type="hidden" class="id" value="'.$instanceArray['id'].'"/>
@@ -348,6 +370,7 @@ class CRUDController extends BaseController
 
         $instance = $this->setupAssigns($instance);
         if (!$instance->hasError()) {
+            $this->afterCreateSuccess($instance);
             if ($this->successTarget == 'edit') {
                 $this->successAction($this->app->getTranslator()->translate('created'), $this->app->getRouter()->getUrl($this->editPath, array('id' => $instance->id)), 'create', $instance);
             }
@@ -381,6 +404,7 @@ class CRUDController extends BaseController
 
             if (!$instance->hasError()) {
                 try {
+                    $this->afterUpdateSuccess($instance);
                     R::store($instance);
                     $instance = $this->setupAssigns($instance);
                     if ($this->successTarget == 'edit') {
