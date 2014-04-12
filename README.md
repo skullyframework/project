@@ -22,15 +22,14 @@ Requirements:
 - Application may get any Controller (ControllerFactory::create).
 - Controller has access to theme ($this->app->theme)
 
-* Controller Requirements
+*Controller Requirements*
 - Controller needs to know which language
-
 - Models may each have different db adapters, or even not attached to db.
 - Views are stored inside themes directory along with resources and languages, divided by apps,
   this allows for:
-  > Different themes to have entirely different displays (i.e. Christmas sale, normal period, etc.).
-  > Different apps to have different set of languages and resources, and languages for one app
-    not getting loaded when loading another app.
+    - Different themes to have entirely different displays (i.e. Christmas sale, normal period, etc.).
+    - Different apps to have different set of languages and resources, and languages for one app
+      not getting loaded when loading another app.
 - Should helpers be tied to an application? Not physically, at least. For now lets define helpers
   outside Application, and pass Application instance only when needed.
   Lets make each helper as Singleton class.
