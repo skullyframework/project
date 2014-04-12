@@ -24,11 +24,11 @@ Features:
         - In Controllers and Models app can be accessed with $this->app.
         - On places not directly connected with app, e.g. library classes and PHPUnit tests, you
           can include the app's bootstrap file, then do the following
-          ```
+          ```PHP
           $app = __setupApp();
           ```
           If you wish to setup the app with a different config you can do so by doing the following:
-          ```
+          ```PHP
           $config = new \App\Config\Config(); // which is inherited from \Skully\Core\Config.
 
           setCommonConfig($config);
@@ -79,7 +79,7 @@ Here is the idea:
 
 Code references:
 1. Book Model
-   ```
+   ```PHP
        public function setAuthors($authorIds)
        {
            R::exec("DELETE FROM bookauthor WHERE book_id = ?", array($this->get('id')));
@@ -91,7 +91,7 @@ Code references:
        }
    ```
 2. BooksController Controller
-   ```
+   ```PHP
        /**
         * @param \App\Models\Book $instance
         */
@@ -100,7 +100,7 @@ Code references:
        }
    ```
 3. _editForm.tpl View
-   ```
+   ```Smarty
        <div class="row-form">
            <div class="span2"><label for="roomamenities">Amenities:</label></div>
            <div class="span10">
@@ -112,8 +112,6 @@ Code references:
            </div>
        </div>
    ```
-
-Within your controller, which was inherited from CRUDController, basically you nn
 
 ### Cron
 Opens a file that lists all cron jobs, which you can use to create, edit, and delete crons:
