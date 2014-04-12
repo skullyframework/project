@@ -9,7 +9,7 @@ team members.
 
 Features:
 
-1. ActiveRecord pattern for models.
+1. RedBeanPHP as its ORM.
 2. Javascript compressing tool.
 3. Sass / Scss
 4. Templating system supported by Smarty. Templates are also completely separated from rest of the project's code. This allows for work division between client and server developers.
