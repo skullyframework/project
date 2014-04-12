@@ -91,6 +91,7 @@ Code references:
        }
    ```
 2. BooksController Controller
+
    ```PHP
        /**
         * @param \App\Models\Book $instance
@@ -100,6 +101,7 @@ Code references:
         }
    ```
 3. _editForm.tpl View
+
    ```Smarty
    <div class="row-form">
    <div class="span2"><label for="roomamenities">Amenities:</label></div>
