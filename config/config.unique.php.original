@@ -1,0 +1,66 @@
+<?php
+
+
+date_default_timezone_set('Asia/Jakarta');
+
+use App\Config\Config;
+
+function setUniqueConfig(Config &$config) {
+    if(empty($serverName)) $serverName = $_SERVER["SERVER_NAME"];
+
+    if ($serverName == 'localhost') {
+        $config_r=array(
+            'serverName' => $serverName,
+            "dbConfig" => array(
+                'driver' => 'pdo_mysql',
+                "host"	    => "127.0.0.1",
+                "user"	    => "root",
+                "password"	=> "oisadj",
+                "port"		=> "3306",
+                "dbname"	=> "donini"
+            ),
+        );
+    }
+    elseif ($serverName == 'test') {
+        $config_r=array(
+            'serverName' => $serverName,
+            "dbConfig" => array(
+                'driver' => 'pdo_mysql',
+                "host"	    => "127.0.0.1",
+                "user"	    => "root",
+                "password"	=> "oisadj",
+                "port"		=> "3306",
+                "dbname"	=> "doniniTest"
+            ),
+        );
+    }
+    else {
+        $config_r=array(
+            'serverName' => $serverName,
+            "dbConfig" => array(
+                'driver' => 'pdo_mysql',
+                "host"	    => "localhost",
+                "user"	    => "doniniba_usr",
+                "password"	=> "laiwjd2130",
+                "port"		=> "3306",
+                "dbname"	=> "doniniba_db"
+            )
+        );
+    }
+    $config->setProtectedFromArray($config_r);
+
+    if ($serverName == 'localhost') {
+        $clientAndServerConfig = array(
+        );
+    }
+    elseif ($serverName == 'test') {
+        $clientAndServerConfig = array(
+        );
+    }
+    else {
+        $clientAndServerConfig = array(
+        );
+    }
+    $config->setProtectedFromArray($clientAndServerConfig);
+    $config->setPublicFromArray($clientAndServerConfig);
+}

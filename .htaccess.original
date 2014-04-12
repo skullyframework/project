@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+    RewriteEngine On
+
+    # Redirect Trailing Slashes...
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+    RewriteRule /*\.(css|js|gif|png|jpe?g|ico|swf|csv|html|xlsx|xls)$ - [NC,L]
+    AddType application/x-httpd-php .php
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+<FilesMatch "(?:console|bootstrap\.php|globals\.php|\.gitignore|\.htaccess\.original|\.json|\.lock|\.phar|\.md)$">
+Order allow,deny
+Deny from all
+</FilesMatch>

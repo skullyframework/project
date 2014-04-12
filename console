@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+$serverName = 'localhost';
+if (!empty($argv)) {
+    foreach($argv as $arg) {
+        if ($arg == '-p' or $arg == '--production') {
+            $serverName = 'production';
+        }
+        elseif ($arg == '-t' or $arg == '--test') {
+            $serverName = 'test';
+        }
+    }
+}
+require_once('bootstrap.php');
+$app = __setupApp($serverName);
+
+use Skully\Console\Console;
+$consoleApp = new Console($app);
+$consoleApp->run();

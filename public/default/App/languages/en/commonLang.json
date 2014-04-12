@@ -1,0 +1,16 @@
+{
+    "mainMetaTitle": "Skully Project",
+    "mainMetaDesc": "Skully Project",
+    "mainMetaKey": "skully project",
+    "notFound" : "Not Found",
+    "notFoundTitle": "You are trying to access a page that doesn't exist. Try another one.",
+    "modelOnlyOnePromotion": "Please turn off all other promotions.",
+    "mustExists": "{$varStr} must not be empty",
+    "mustUnique": "{$varStr} already exists",
+    "passwordEmpty": "Please enter password.",
+    "passwordConfirmationWrong": "Password confirmation must be similar to password.",
+    "unknownError": "Unknown Error occurred.",
+    "errorFileEmpty": "File is empty.",
+    "imageUploaded": "Image uploaded",
+    "instanceNotFound": "{$model} not found."
+}
