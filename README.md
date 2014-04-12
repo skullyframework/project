@@ -17,7 +17,7 @@ Features:
 
 Requirements:
 - Project may consist of only a single main Application (Skully\Application) as an entry point of web requests.
-- This Application hence should use Singleton pattern.
+- Full support in testing with PHPUnit (hence no Singletons).
 - Configuration class may be attached into this application (Skully\Core\Config).
 - Application may get any Controller (ControllerFactory::create).
 - Controller has access to theme ($this->app->theme)
