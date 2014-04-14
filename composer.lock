@@ -167,21 +167,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "54059dedb1e5982cb1cae4f82ac9d1d75e471bf5"
+                "reference": "abfdf388c2f47c4d4ba721afab7e91f15ffa476f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/54059dedb1e5982cb1cae4f82ac9d1d75e471bf5",
-                "reference": "54059dedb1e5982cb1cae4f82ac9d1d75e471bf5",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/abfdf388c2f47c4d4ba721afab7e91f15ffa476f",
+                "reference": "abfdf388c2f47c4d4ba721afab7e91f15ffa476f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
+                "psr/log": "~1.0",
                 "symfony/event-dispatcher": "~2.1"
             },
             "suggest": {
+                "psr/log": "For using the console logger",
                 "symfony/event-dispatcher": ""
             },
             "type": "library",
@@ -213,7 +215,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-03-19 06:24:10"
+            "time": "2014-04-02 16:54:39"
         },
         {
             "name": "triodigital/skully",
@@ -221,12 +223,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/triodigital/skully.git",
-                "reference": "834d601f5e500c0d1b9a456a28756c1053ca1506"
+                "reference": "cba64cfa5f5757b02b9d155ebe42761805051ca3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/triodigital/skully/zipball/834d601f5e500c0d1b9a456a28756c1053ca1506",
-                "reference": "834d601f5e500c0d1b9a456a28756c1053ca1506",
+                "url": "https://api.github.com/repos/triodigital/skully/zipball/cba64cfa5f5757b02b9d155ebe42761805051ca3",
+                "reference": "cba64cfa5f5757b02b9d155ebe42761805051ca3",
                 "shasum": ""
             },
             "require": {
@@ -268,7 +270,7 @@
                 "source": "https://github.com/triodigital/skully/tree/master",
                 "issues": "https://github.com/triodigital/skully/issues"
             },
-            "time": "2014-03-21 08:54:03"
+            "time": "2014-04-13 16:16:02"
         }
     ],
     "packages-dev": [
@@ -308,12 +310,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/dbunit.git",
-                "reference": "58480be1cd920aa289e488ced0b043532d8885ec"
+                "reference": "a5891b7a9c4f21587a51f9bc4e8f7042b741b480"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/dbunit/zipball/58480be1cd920aa289e488ced0b043532d8885ec",
-                "reference": "58480be1cd920aa289e488ced0b043532d8885ec",
+                "url": "https://api.github.com/repos/sebastianbergmann/dbunit/zipball/a5891b7a9c4f21587a51f9bc4e8f7042b741b480",
+                "reference": "a5891b7a9c4f21587a51f9bc4e8f7042b741b480",
                 "shasum": ""
             },
             "require": {
@@ -359,7 +361,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-03-18 14:48:46"
+            "time": "2014-03-26 11:25:06"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -367,12 +369,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "69e55e68481cf708a6db43aff0b504e31402fe27"
+                "reference": "6ef2bf3a1c47eca07ea95f0d8a902a6340390b34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/69e55e68481cf708a6db43aff0b504e31402fe27",
-                "reference": "69e55e68481cf708a6db43aff0b504e31402fe27",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/6ef2bf3a1c47eca07ea95f0d8a902a6340390b34",
+                "reference": "6ef2bf3a1c47eca07ea95f0d8a902a6340390b34",
                 "shasum": ""
             },
             "require": {
@@ -420,7 +422,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-02-25 03:34:05"
+            "time": "2014-03-28 10:53:45"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -797,12 +799,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "6194137af5f12fbcfc0cb21e269f47542b8beb47"
+                "reference": "cee3067d680232674c6505d91db9d3d635a9a8f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/6194137af5f12fbcfc0cb21e269f47542b8beb47",
-                "reference": "6194137af5f12fbcfc0cb21e269f47542b8beb47",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/cee3067d680232674c6505d91db9d3d635a9a8f4",
+                "reference": "cee3067d680232674c6505d91db9d3d635a9a8f4",
                 "shasum": ""
             },
             "require": {
@@ -837,7 +839,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-03-03 12:53:01"
+            "time": "2014-03-26 11:51:10"
         }
     ],
     "aliases": [

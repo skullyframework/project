@@ -15,7 +15,7 @@ class BaseController extends \App\Controllers\BaseController {
         return $this->app->getAdmin();
     }
 
-    protected function beforeAction($action = '') {
+    protected function beforeAction() {
         $this->mustBeLoggedIn();
     }
 

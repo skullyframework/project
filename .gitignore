@@ -4,7 +4,7 @@ logs/*
 public/default/resources/scss/.sass-cache/*
 App/smarty/templates_c/*
 vendor/composer/installed.json
-.htaccess
+/.htaccess
 App/smarty/cache/*
 tools/dbmigrator/logs/*
 .idea

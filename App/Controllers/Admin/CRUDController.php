@@ -260,7 +260,8 @@ class CRUDController extends BaseController
     }
 
 
-    protected function beforeAction($action = '') {
+    protected function beforeAction() {
+        $action = $this->getCurrentAction();
         parent::beforeAction();
         if ($action == 'create') {
             // For when user go to create page directly
