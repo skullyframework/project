@@ -5,7 +5,7 @@ date_default_timezone_set('Asia/Jakarta');
 
 use App\Config\Config;
 
-function setUniqueConfig(Config &$config) {
+function setUniqueConfig(Config &$config, $serverName = null) {
     if(empty($serverName)) $serverName = $_SERVER["SERVER_NAME"];
 
     if ($serverName == 'localhost') {
