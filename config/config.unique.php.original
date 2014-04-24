@@ -12,7 +12,7 @@ function setUniqueConfig(Config &$config) {
         $config_r=array(
             'serverName' => $serverName,
             "dbConfig" => array(
-                'driver' => 'pdo_mysql',
+                'type' => 'mysql',
                 "host"	    => "127.0.0.1",
                 "user"	    => "root",
                 "password"	=> "oisadj",
@@ -25,7 +25,7 @@ function setUniqueConfig(Config &$config) {
         $config_r=array(
             'serverName' => $serverName,
             "dbConfig" => array(
-                'driver' => 'pdo_mysql',
+                'type' => 'mysql',
                 "host"	    => "127.0.0.1",
                 "user"	    => "root",
                 "password"	=> "oisadj",
@@ -38,7 +38,7 @@ function setUniqueConfig(Config &$config) {
         $config_r=array(
             'serverName' => $serverName,
             "dbConfig" => array(
-                'driver' => 'pdo_mysql',
+                'type' => 'mysql',
                 "host"	    => "localhost",
                 "user"	    => "doniniba_usr",
                 "password"	=> "laiwjd2130",

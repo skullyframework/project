@@ -46,7 +46,6 @@ class CRUDController extends BaseController
     public $thAttributes = array(); // Class sort_asc or sort_desc can be used to set default sorting.
     public $columnDefs = '[]'; // Use this to handle columns' behaviours, doc: http://www.datatables.net/usage/columns
 
-
     // Minimum overriding requirements //
     /**
      * Override this with model linked with this controller.
@@ -104,7 +103,7 @@ class CRUDController extends BaseController
      */
     protected function listActions($instanceArray)
     {
-        $actions = array('data' => '<a title="View" href="'.$this->app->getRouter()->getUrl($this->editPath, array('id' => $instanceArray['id'])).'" data-toggle="dialog"><span class="icon-pencil"></span></a>
+        $actions = array('data' => '<a title="View" href="'.$this->app->getRouter()->getUrl($this->editPath, array('id' => $instanceArray['id'])).'"><span class="icon-pencil"></span></a>
 					<a title="Delete" href="'.$this->app->getRouter()->getUrl($this->deletePath, array('id' => $instanceArray['id'])).'" data-toggle="dialog"><span class="icon-trash"></span></a>', 'class' => 'TAC');
         if (!is_null($this->dragField)) {
             $actions['data'] .='<input type="hidden" class="id" value="'.$instanceArray['id'].'"/>
@@ -210,7 +209,6 @@ class CRUDController extends BaseController
         /** @var \RedBean_SimpleModel $instanceBean */
         $instanceBean = R::findOne($this->model(), 'id = ?', array($id));
         if (!empty($instanceBean)) {
-            echo "instance bean not empty\n";
             /** @var \App\Models\BaseModel $instance */
             $instance = $instanceBean->box();
             if ($direction == 'back') {
@@ -327,7 +325,7 @@ class CRUDController extends BaseController
             ));
         }
         else {
-            $instance = $this->setInstanceAttributes($instance);
+//            $instance = $this->setInstanceAttributes($instance);
             $this->setupAssigns($instance);
             if ($this->destroyPath != null) {
                 $this->app->getTemplateEngine()->assign(array('destroyPath' => $this->destroyPath));
@@ -437,7 +435,7 @@ class CRUDController extends BaseController
 
     public function destroy() {
         $instance = $this->findInstance(true);
-        $instance = $this->setInstanceAttributes($instance);
+//        $instance = $this->setInstanceAttributes($instance);
         $error = true;
         if (!$instance->hasError()) {
             try {
