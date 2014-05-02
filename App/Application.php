@@ -5,6 +5,7 @@ namespace App;
 use App\Controllers\BaseController;
 use RedBean_Facade as R;
 use Skully\Core\ConfigInterface;
+use Skully\Core\Templating\SmartyAdapter;
 use Skully\Exceptions\InvalidConfigException;
 
 
@@ -93,5 +94,19 @@ class Application extends \Skully\Application {
                 }
             }
         }
+    }
+
+    public function getTemplateEngine()
+    {
+        if (empty($this->templateEngine)) {
+            $caching = 0;
+            // Smarty caching is currently broken (v.3.1.16) so we disable it
+//            if (!$this->configIsEmpty('caching')) {
+//                $caching = $this->config('caching');
+//            }
+            $this->templateEngine = new SmartyAdapter($this->config('basePath'), $this->config('theme'), $this, $this->additionalTemplateEnginePluginsDir(), $caching);
+            $this->templateEngine->registerObject('app', $this);
+        }
+        return $this->templateEngine;
     }
 }

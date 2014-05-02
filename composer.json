@@ -14,7 +14,6 @@
     },
     "autoload": {
         "psr-0": {
-            "ImageProcessor": "library/imageProcessor",
             "App\\": ""
         }
     },
@@ -22,6 +21,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/triodigital/skully"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/triodigital/skully-admin"
         },
         {
             "type": "vcs",

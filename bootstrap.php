@@ -17,7 +17,7 @@ require_once(BASE_PATH . 'config/config.unique.php');
 
 if (!function_exists('__setupApp')) {
     function __setupApp($serverName = null) {
-        if(empty($serverName)) {
+        if(empty($serverName) && defined($_SERVER["SERVER_NAME"])) {
             $serverName = $_SERVER["SERVER_NAME"];
         };
 
@@ -49,7 +49,7 @@ if (!function_exists('errorHandler')) {
             case E_PARSE:
                 $logger->log($error, "fatal");
                 return false;
-            break;
+                break;
             case E_USER_ERROR:
             case E_RECOVERABLE_ERROR:
                 $logger->log($error, "error");

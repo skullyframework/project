@@ -15,6 +15,7 @@ class SettingTable extends Ruckusing_Migration_Base
               `is_client` tinyint(1) DEFAULT '0',
               `input_type` varchar(20) DEFAULT 'text',
               `position` int(11) unsigned DEFAULT '0',
+              `is_visible` tinyint(11) unsigned DEFAULT '1',
               `info` text,
               PRIMARY KEY (`id`)
             ) ENGINE=MyISAM DEFAULT CHARSET=utf8;"

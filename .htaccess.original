@@ -14,6 +14,7 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
 <FilesMatch "(?:console|bootstrap\.php|globals\.php|\.gitignore|\.htaccess\.original|\.json|\.lock|\.phar|\.md)$">
 Order allow,deny
 Deny from all

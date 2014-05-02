@@ -2,12 +2,14 @@
 <?php
 $serverName = 'localhost';
 if (!empty($argv)) {
-    foreach($argv as $arg) {
+    foreach($argv as $index => $arg) {
         if ($arg == '-p' or $arg == '--production') {
             $serverName = 'production';
+            unset($argv[$index]);
         }
         elseif ($arg == '-t' or $arg == '--test') {
             $serverName = 'test';
+            unset($argv[$index]);
         }
     }
 }
@@ -16,4 +18,5 @@ $app = __setupApp($serverName);
 
 use Skully\Console\Console;
 $consoleApp = new Console($app);
-$consoleApp->run();
+array_shift($argv);
+$consoleApp->run(implode(' ', $argv));

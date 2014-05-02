@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "e71a13ce7e490af37109be4b2fbee023",
+    "hash": "413996c6ddb31e5b0cc9b0fa6a9dc4ba",
     "packages": [
         {
             "name": "gabordemooij/redbean",
-            "version": "dev-master",
+            "version": "v3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gabordemooij/redbean.git",
-                "reference": "b146123c108425f7dc06dd2eb8fb218f87f9a075"
+                "reference": "41bb293e2bc744c150e4ae30e30fb5083e047f53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gabordemooij/redbean/zipball/b146123c108425f7dc06dd2eb8fb218f87f9a075",
-                "reference": "b146123c108425f7dc06dd2eb8fb218f87f9a075",
+                "url": "https://api.github.com/repos/gabordemooij/redbean/zipball/41bb293e2bc744c150e4ae30e30fb5083e047f53",
+                "reference": "41bb293e2bc744c150e4ae30e30fb5083e047f53",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                 "Object Relational Mapping",
                 "orm"
             ],
-            "time": "2014-03-02 12:03:05"
+            "time": "2013-10-30 22:13:02"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -167,12 +167,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "abfdf388c2f47c4d4ba721afab7e91f15ffa476f"
+                "reference": "d12686cea4e1155ed93449c0bca9db223f31bb2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/abfdf388c2f47c4d4ba721afab7e91f15ffa476f",
-                "reference": "abfdf388c2f47c4d4ba721afab7e91f15ffa476f",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/d12686cea4e1155ed93449c0bca9db223f31bb2d",
+                "reference": "d12686cea4e1155ed93449c0bca9db223f31bb2d",
                 "shasum": ""
             },
             "require": {
@@ -215,7 +215,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-04-02 16:54:39"
+            "time": "2014-04-28 13:26:08"
         },
         {
             "name": "triodigital/skully",
@@ -223,17 +223,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/triodigital/skully.git",
-                "reference": "cba64cfa5f5757b02b9d155ebe42761805051ca3"
+                "reference": "0c1d354be58d625e3795f426ad4e0cf493dfb4bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/triodigital/skully/zipball/cba64cfa5f5757b02b9d155ebe42761805051ca3",
-                "reference": "cba64cfa5f5757b02b9d155ebe42761805051ca3",
+                "url": "https://api.github.com/repos/triodigital/skully/zipball/0c1d354be58d625e3795f426ad4e0cf493dfb4bc",
+                "reference": "0c1d354be58d625e3795f426ad4e0cf493dfb4bc",
                 "shasum": ""
             },
             "require": {
-                "gabordemooij/redbean": "dev-master",
-                "php": ">=5.5.3",
+                "gabordemooij/redbean": "3.x",
+                "php": ">=5.4",
                 "ruckusing/ruckusing-migrations": "dev-master",
                 "symfony/console": "2.5.x-dev"
             },
@@ -270,7 +270,7 @@
                 "source": "https://github.com/triodigital/skully/tree/master",
                 "issues": "https://github.com/triodigital/skully/issues"
             },
-            "time": "2014-04-13 16:16:02"
+            "time": "2014-05-01 07:47:29"
         }
     ],
     "packages-dev": [
@@ -799,12 +799,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "cee3067d680232674c6505d91db9d3d635a9a8f4"
+                "reference": "e9525fc511a51e7bfa214c6c420515c580fda35a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/cee3067d680232674c6505d91db9d3d635a9a8f4",
-                "reference": "cee3067d680232674c6505d91db9d3d635a9a8f4",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/e9525fc511a51e7bfa214c6c420515c580fda35a",
+                "reference": "e9525fc511a51e7bfa214c6c420515c580fda35a",
                 "shasum": ""
             },
             "require": {
@@ -839,7 +839,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-03-26 11:51:10"
+            "time": "2014-04-18 20:40:13"
         }
     ],
     "aliases": [

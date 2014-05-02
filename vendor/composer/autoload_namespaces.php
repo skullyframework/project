@@ -13,6 +13,5 @@ return array(
     'Skully\\' => array($vendorDir . '/triodigital/skully'),
     'Ruckusing' => array($vendorDir . '/ruckusing/ruckusing-migrations/lib'),
     'RedBean_' => array($vendorDir . '/gabordemooij/redbean'),
-    'ImageProcessor' => array($baseDir . '/library/imageProcessor'),
     'App\\' => array($baseDir . '/'),
 );
