@@ -3,7 +3,7 @@
 namespace App;
 
 use App\Controllers\BaseController;
-use RedBean_Facade as R;
+use RedBeanPHP\Facade as R;
 use Skully\Core\ConfigInterface;
 use Skully\Core\Templating\SmartyAdapter;
 use Skully\Exceptions\InvalidConfigException;
