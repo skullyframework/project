@@ -30,7 +30,7 @@ function setCommonConfig(Config &$config, $serverName = null) {
         );
 
         $clientAndServerConfigAdd = array(
-            'baseUrl' => 'http://localhost/localsite/',
+            'baseUrl' => 'http://localhost/skully-project/',
             /**
              * Public directory. baseUrl + publicDir is the path to public directory accessible by public.
              * Set to '' for virtual host.
