@@ -24,10 +24,6 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/triodigital/skully-admin"
-        },
-        {
-            "type": "vcs",
             "url": "https://github.com/jaycode/ruckusing-migrations"
         }
     ],

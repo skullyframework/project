@@ -4,6 +4,6 @@
 namespace App\Models;
 
 
-class Session extends \Skully\App\Models\Session{
+class Session extends \Skully\App\Models\Session {
 
 } 

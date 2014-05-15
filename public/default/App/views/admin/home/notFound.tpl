@@ -1,1 +1,0 @@
-{extends file="admin/wrappers/_error.tpl"}

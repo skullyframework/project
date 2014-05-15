@@ -3,51 +3,8 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "413996c6ddb31e5b0cc9b0fa6a9dc4ba",
+    "hash": "693fc93a715886825b5c54a1e9a44721",
     "packages": [
-        {
-            "name": "gabordemooij/redbean",
-            "version": "v3.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/gabordemooij/redbean.git",
-                "reference": "41bb293e2bc744c150e4ae30e30fb5083e047f53"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gabordemooij/redbean/zipball/41bb293e2bc744c150e4ae30e30fb5083e047f53",
-                "reference": "41bb293e2bc744c150e4ae30e30fb5083e047f53",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "RedBean_": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD"
-            ],
-            "authors": [
-                {
-                    "name": "Gabor de Mooij",
-                    "email": "gabordemooij@gmail.com",
-                    "homepage": "http://www.redbeanphp.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Easy ORM for PHP",
-            "homepage": "http://github.com/gabordemooij/redbean",
-            "keywords": [
-                "Object Relational Mapping",
-                "orm"
-            ],
-            "time": "2013-10-30 22:13:02"
-        },
         {
             "name": "phpmailer/phpmailer",
             "version": "v5.2.7",
@@ -167,12 +124,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "d12686cea4e1155ed93449c0bca9db223f31bb2d"
+                "reference": "50be4f30d0a93404e5d62b05fd7294492cf64c4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/d12686cea4e1155ed93449c0bca9db223f31bb2d",
-                "reference": "d12686cea4e1155ed93449c0bca9db223f31bb2d",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/50be4f30d0a93404e5d62b05fd7294492cf64c4f",
+                "reference": "50be4f30d0a93404e5d62b05fd7294492cf64c4f",
                 "shasum": ""
             },
             "require": {
@@ -215,7 +172,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-04-28 13:26:08"
+            "time": "2014-05-15 08:56:35"
         },
         {
             "name": "triodigital/skully",
@@ -223,16 +180,15 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/triodigital/skully.git",
-                "reference": "0c1d354be58d625e3795f426ad4e0cf493dfb4bc"
+                "reference": "6d4a1645ce282a0c6fa37bbfff47992bf405244f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/triodigital/skully/zipball/0c1d354be58d625e3795f426ad4e0cf493dfb4bc",
-                "reference": "0c1d354be58d625e3795f426ad4e0cf493dfb4bc",
+                "url": "https://api.github.com/repos/triodigital/skully/zipball/6d4a1645ce282a0c6fa37bbfff47992bf405244f",
+                "reference": "6d4a1645ce282a0c6fa37bbfff47992bf405244f",
                 "shasum": ""
             },
             "require": {
-                "gabordemooij/redbean": "3.x",
                 "php": ">=5.4",
                 "ruckusing/ruckusing-migrations": "dev-master",
                 "symfony/console": "2.5.x-dev"
@@ -249,7 +205,8 @@
             "type": "package",
             "autoload": {
                 "psr-0": {
-                    "Skully\\": ""
+                    "Skully\\": "",
+                    "RedBeanPHP\\": "Skully/Library/redbean"
                 }
             },
             "license": [
@@ -270,7 +227,7 @@
                 "source": "https://github.com/triodigital/skully/tree/master",
                 "issues": "https://github.com/triodigital/skully/issues"
             },
-            "time": "2014-05-01 07:47:29"
+            "time": "2014-05-14 10:36:58"
         }
     ],
     "packages-dev": [
@@ -563,12 +520,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "ad4e1e23ae01b483c16f600ff1bebec184588e32"
+                "reference": "955c24b708f8bfd6a05f303217a8dac3a443d531"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/ad4e1e23ae01b483c16f600ff1bebec184588e32",
-                "reference": "ad4e1e23ae01b483c16f600ff1bebec184588e32",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/955c24b708f8bfd6a05f303217a8dac3a443d531",
+                "reference": "955c24b708f8bfd6a05f303217a8dac3a443d531",
                 "shasum": ""
             },
             "require": {
@@ -605,7 +562,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2014-03-03 05:10:30"
+            "time": "2014-05-12 05:34:42"
         },
         {
             "name": "phpunit/phpunit",

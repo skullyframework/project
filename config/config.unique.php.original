@@ -51,15 +51,18 @@ function setUniqueConfig(Config &$config, $serverName = null) {
 
     if ($serverName == 'localhost') {
         $clientAndServerConfig = array(
+            'baseUrl' => 'http://localhost/skully-project/',
         );
     }
     elseif ($serverName == 'test') {
         $clientAndServerConfig = array(
-        );
+             'baseUrl' => 'http://localhost/skully-project/',
+       );
     }
     else {
         $clientAndServerConfig = array(
-        );
+              'baseUrl' => 'http://localhost/skully-project/',
+      );
     }
     $config->setProtectedFromArray($clientAndServerConfig);
     $config->setPublicFromArray($clientAndServerConfig);
