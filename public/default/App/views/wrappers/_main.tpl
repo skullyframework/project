@@ -22,7 +22,7 @@
             </section>
 
             <section class="middle tab-bar-section">
-                <h1 class="title">Immintelligence</h1>
+                <h1 class="title">Skully Framework</h1>
             </section>
 
             <section class="right-small">
@@ -41,16 +41,10 @@
         <aside class="right-off-canvas-menu">
             <ul class="off-canvas-list">
                 {if $isLoggedIn }
-                    <li><a href="{url path="student/browse" all=false}">Browse Recommended</a></li>
-                    <li><a href="{url path="student/browse" all=true}">Browse All</a></li>
-                    <li><a href="{url path="student/logout"}">Log Out</a></li>
+                    <li><a href="{url path="users/logout"}">Log Out</a></li>
                 {else}
-                    <li><label>Students</label></li>
-                    <li><a href="{url path="student/login"}">Student Login</a></li>
-                    <li><a href="{url path="student/signup"}">Student Sign Up</a></li>
-                    <li><label>Teachers</label></li>
-                    <li><a href="{url path="teacher/login"}">Teacher Login</a></li>
-                    <li><a href="{url path="teacher/signup"}">Teacher Sign Up</a></li>
+                    <li><a href="{url path="users/login"}">Login</a></li>
+                    <li><a href="{url path="users/signup"}">Sign Up</a></li>
                 {/if}
             </ul>
         </aside>

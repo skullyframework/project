@@ -180,12 +180,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/triodigital/skully.git",
-                "reference": "6d4a1645ce282a0c6fa37bbfff47992bf405244f"
+                "reference": "9ea0c0f0ea81558b0f28ffe89711c845eaa2d3b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/triodigital/skully/zipball/6d4a1645ce282a0c6fa37bbfff47992bf405244f",
-                "reference": "6d4a1645ce282a0c6fa37bbfff47992bf405244f",
+                "url": "https://api.github.com/repos/triodigital/skully/zipball/9ea0c0f0ea81558b0f28ffe89711c845eaa2d3b7",
+                "reference": "9ea0c0f0ea81558b0f28ffe89711c845eaa2d3b7",
                 "shasum": ""
             },
             "require": {
@@ -227,7 +227,7 @@
                 "source": "https://github.com/triodigital/skully/tree/master",
                 "issues": "https://github.com/triodigital/skully/issues"
             },
-            "time": "2014-05-14 10:36:58"
+            "time": "2014-05-15 13:04:05"
         }
     ],
     "packages-dev": [

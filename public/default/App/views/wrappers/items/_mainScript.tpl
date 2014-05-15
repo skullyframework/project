@@ -1,7 +1,4 @@
-<script src="{theme_url path='resources/js_unpacked/modernizr.js'}"></script>
-<script src="{theme_url path='resources/js_unpacked/jquery.js'}"></script>
-<script src="{theme_url path='resources/js_unpacked/jquery-ui.min.js'}"></script>
-<script src="{theme_url path='resources/js_unpacked/foundation.min.js'}"></script>
+<script src="{theme_url path='resources/js/custom.js'}"></script>
 
 <script type="text/javascript">
     $(document).foundation('interchange', {
