@@ -1,2 +1,6 @@
-@combine ../js/all.js
-  stuff.js
+@combine ../js/custom.js
+  modernizr.js
+  jquery.js
+  jquery-ui.min.js
+  foundation.min.js
+  custom.js
