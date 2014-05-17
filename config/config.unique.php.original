@@ -17,7 +17,8 @@ function setUniqueConfig(Config &$config, $serverName = null) {
                 "user"	    => "root",
                 "password"	=> "oisadj",
                 "port"		=> "3306",
-                "dbname"	=> "donini"
+                "dbname"	=> "donini",
+                'charset'   => 'utf8'
             ),
         );
     }
@@ -30,7 +31,8 @@ function setUniqueConfig(Config &$config, $serverName = null) {
                 "user"	    => "root",
                 "password"	=> "oisadj",
                 "port"		=> "3306",
-                "dbname"	=> "doniniTest"
+                "dbname"	=> "doniniTest",
+                'charset'   => 'utf8'
             ),
         );
     }
@@ -43,7 +45,8 @@ function setUniqueConfig(Config &$config, $serverName = null) {
                 "user"	    => "doniniba_usr",
                 "password"	=> "laiwjd2130",
                 "port"		=> "3306",
-                "dbname"	=> "doniniba_db"
+                "dbname"	=> "doniniba_db",
+                'charset'   => 'utf8'
             )
         );
     }
