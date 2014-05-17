@@ -26,8 +26,8 @@ require_once(BASE_PATH . '/vendor/autoload.php');
 use App\Config\Config;
 
 require_once(BASE_PATH . '/globals.php');
-require_once( BASE_PATH.'/config/config.common.php');
-require_once( BASE_PATH.'/config/config.unique.php');
+require_once(BASE_PATH . '/config/config.common.php');
+require_once(BASE_PATH . '/config/config.unique.php');
 
 $config = new Config();
 // === END ===
