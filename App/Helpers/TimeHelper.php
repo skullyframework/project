@@ -1,15 +1,7 @@
 <?php
-/**
- * Created by Jay from TrioDesign (trio@tgitriodesign.com).
- * Date: 5/6/13
- * Time: 2:05 PM
- *
- */
 namespace App\Helpers;
 
-use Skully\Core\ApplicationAwareHelper;
-
-class TimeHelper extends ApplicationAwareHelper{
+class TimeHelper extends \Skully\App\Helpers\TimeHelper{
 
     public static function isEmpty($date)
     {

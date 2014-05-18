@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by Trio (jay@tgitriodesign.com).
- * Date: 5/6/13
- * Time: 2:05 PM
- *
- */
 namespace App\Helpers;
 class PaginationHelper
 {

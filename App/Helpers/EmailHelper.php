@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by TrioDesign (trio@tgitriodesign.com).
- * User: Bobby Stenly Irawan
- * Date: 5/21/13
- * Time: 1:29 PM
- *
- */
 namespace App\Helpers;
 use App\Mailer;
 use Skully\Core\ApplicationAwareHelper;
