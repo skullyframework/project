@@ -13,3 +13,9 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) { @content; }
 }
 }
+
+$small-range: (0px, 767px);
+$medium-range: (768px, 1024px);
+$large-range: (1025px, 1366px);
+$xlarge-range: (1366px);
+$xxlarge-range: (1920px);
