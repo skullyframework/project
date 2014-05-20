@@ -30,6 +30,7 @@ if (!function_exists('__setupApp')) {
     }
 }
 
+// todo: Error shows partial backtrace.
 if (!function_exists('errorHandler')) {
 
     function errorHandler($error_level, $error_message, $error_file, $error_line, $error_context)
@@ -76,6 +77,7 @@ if (!function_exists('errorHandler')) {
         return true;
     }
 
+// todo: shutdownHandler does not show error.
     function shutdownHandler() //will be called when php script ends.
     {
         $logger = new \Skully\Logging\Logger(BASE_PATH);
