@@ -8,8 +8,9 @@ require_once(dirname(__FILE__).'/../../bootstrap.php');
 require_once(dirname(__FILE__) . '/functions.php');
 
 use App\Application;
-use RedBean_Facade as R;
+use RedBeanPHP\Facade as R;
 use App\Config\Config;
+use Skully\Console\Console;
 
 abstract class DatabaseTestCase extends \PHPUnit_Framework_TestCase{
     /** @var Application */
@@ -47,8 +48,8 @@ abstract class DatabaseTestCase extends \PHPUnit_Framework_TestCase{
     protected function migrate()
     {
         ob_start();
-        $argv = array('db:migrate', '-t');
-        require(realpath(dirname(__FILE__)).'/../tools/dbmigrator/ruckus.php');
+        $console = new Console($this->app, true);
+        $output = $console->run("skully:schema db:migrate -t");
         ob_clean();
     }
 

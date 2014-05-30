@@ -3,7 +3,7 @@
 
 namespace Tests\Controllers;
 
-require_once __DIR__.'/../../bootstrap.php';
+require_once realpath(__DIR__.'/../../../bootstrap.php');
 
 class ControllerTest extends \PHPUnit_Framework_TestCase {
 

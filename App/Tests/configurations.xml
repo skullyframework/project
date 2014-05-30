@@ -2,27 +2,10 @@
 <phpunit>
     <testsuites>
         <testsuite name="App_Tests">
-            <!--<file>ApplicationTest.php</file>-->
-            <!--<file>Controllers/BaseControllerTest.php</file>-->
-            <!--<file>Controllers/HomeControllerTest.php</file>-->
-            <!--<file>Controllers/PagesControllerTest.php</file>-->
-            <!--<file>Controllers/ProductsControllerTest.php</file>-->
-            <!--<file>Features/ModelTest.php</file>-->
-            <!--<file>Features/UserTest.php</file>-->
-            <!--<file>Features/ProductTest.php</file>-->
-            <!--<file>Features/PromotionTest.php</file>-->
-            <!--<file>Features/CartTest.php</file>-->
-            <!--<file>Features/CheckoutTest.php</file>-->
-            <!--<file>Features/CategoryTest.php</file>-->
-            <!--<file>Features/NewsTest.php</file>-->
-            <!--<file>Features/Admin/AdminTest.php</file>-->
-            <file>Features/Admin/ProductTest.php</file>
-            <!--<file>Features/Admin/ProductImageTest.php</file>-->
-            <!--<file>Features/Admin/NewsTest.php</file>-->
-            <!--<file>Features/Admin/NewsImageTest.php</file>-->
-            <!--<file>Features/Admin/NewscategoryTest.php</file>-->
-            <!--<file>Features/Admin/AdminsTest.php</file>-->
-            <!--<file>Features/Admin/StoreTest.php</file>-->
+            <file>ApplicationTest.php</file>
+            <file>Controllers/BaseControllerTest.php</file>
+            <file>Controllers/HomeControllerTest.php</file>
+            <file>Features/ModelTest.php</file>
         </testsuite>
     </testsuites>
 </phpunit>
