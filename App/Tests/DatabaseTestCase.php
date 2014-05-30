@@ -30,7 +30,13 @@ abstract class DatabaseTestCase extends \PHPUnit_Framework_TestCase{
 
         $dbConfig = $config->getProtected('dbConfig');
 
-        Application::setupRedBean($dbConfig['host'], $dbConfig['dbname'], $dbConfig['port'], $dbConfig['user'], $dbConfig['password'], $this->frozen);
+        if ($dbConfig['type'] == 'mysql') {
+            Application::setupRedBean("mysql:host={$dbConfig['host']};dbname={$dbConfig['dbname']};port={$dbConfig['port']}", $dbConfig['user'], $dbConfig['password'], $config->getProtected('isDevMode'));
+        }
+        elseif ($dbConfig['type'] == 'sqlite') {
+            Application::setupRedBean("sqlite:{$dbConfig['dbname']}", $dbConfig['user'], $dbConfig['password'], $config->getProtected('isDevMode'));
+        }
+
         R::freeze(false);
         R::nuke();
         R::freeze($this->frozen);
