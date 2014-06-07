@@ -55,7 +55,7 @@ abstract class DatabaseTestCase extends \PHPUnit_Framework_TestCase{
     {
         ob_start();
         $console = new Console($this->app, true);
-        $output = $console->run("skully:schema db:migrate -t");
+        $output = $console->run("skully:schema db:migrate test");
         ob_clean();
     }
 

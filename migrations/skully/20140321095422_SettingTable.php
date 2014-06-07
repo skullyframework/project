@@ -4,25 +4,21 @@ class SettingTable extends Ruckusing_Migration_Base
 {
     public function up()
     {
-        $this->execute(
-            "
-            drop table if exists `setting`;
-            CREATE TABLE `setting` (
-              `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-              `name` varchar(100) DEFAULT NULL,
-              `value` text,
-              `type` varchar(20) DEFAULT 'string',
-              `is_client` tinyint(1) DEFAULT '0',
-              `input_type` varchar(20) DEFAULT 'text',
-              `position` int(11) unsigned DEFAULT '0',
-              `is_visible` tinyint(11) unsigned DEFAULT '1',
-              `info` text,
-              PRIMARY KEY (`id`)
-            ) ENGINE=MyISAM DEFAULT CHARSET=utf8;"
-        );
+        $t = $this->create_table('setting', array('options' => 'Engine=InnoDB collate=utf8_unicode_ci'));
+        $t->column('name', 'string', array('length' => 100));
+        $t->column('description', 'text');
+        $t->column('value', 'text');
+        $t->column('type', 'string', array('length' => 20, 'default' => 'string'));
+        $t->column('is_client', 'boolean', array('default' => false));
+        $t->column('input_type', 'string', array('length' => 20, 'default' => 'text'));
+        $t->column('position', 'integer', array('default' => 0));
+        $t->column('info', 'text');
+        $t->column('is_visible', 'boolean', array('default' => true));
+        $t->finish();
     }//up()
 
     public function down()
     {
+        $this->drop_table('setting');
     }//down()
 }
