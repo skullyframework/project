@@ -3,9 +3,7 @@
 Read about Skully Framework [here](http://github.com/triodigital/skully).
 
 ## Features & Behaviours of a Skully project
-- Project may consist of only a single main Application (Skully\Application) as an entry point of web requests.
-- Full support in testing with PHPUnit (hence no Singletons).
-- Configuration class may be attached into this application (Skully\Core\Config).
+
 - Environment-awareness:
     - App is accessible from anywhere:
         - In Controllers and Models app can be accessed with $this->app.
