@@ -10,7 +10,7 @@
     },
     "require": {
         "phpmailer/phpmailer": "v5.2.7",
-        "skullyframework/skully": "0.*"
+        "skullyframework/skully": "0.1.*"
     },
     "autoload": {
         "psr-0": {
