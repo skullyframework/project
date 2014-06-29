@@ -10,8 +10,9 @@ return array(
     'Task' => array($vendorDir . '/ruckusing/ruckusing-migrations/lib'),
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
-    'Skully\\' => array($vendorDir . '/triodigital/skully'),
+    'Skully\\' => array($vendorDir . '/skullyframework/skully'),
     'Ruckusing' => array($vendorDir . '/ruckusing/ruckusing-migrations/lib'),
-    'RedBeanPHP\\' => array($vendorDir . '/triodigital/skully/Skully/Library/redbean'),
+    'RedBeanPHP\\' => array($vendorDir . '/skullyframework/skully/Skully/Library/redbean'),
+    'HtmlPlainText' => array($baseDir . '/library/htmlPlainText'),
     'App\\' => array($baseDir . '/'),
 );
