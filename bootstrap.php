@@ -13,7 +13,10 @@ use App\Config\Config;
 
 require_once(BASE_PATH . 'globals.php');
 require_once(BASE_PATH . 'config/config.common.php');
-require_once(BASE_PATH . 'config/config.unique.php');
+$uniqueConfig = BASE_PATH . 'config/config.unique.php';
+if (file_exists($uniqueConfig)) {
+    require_once($uniqueConfig);
+}
 
 if (!function_exists('__setupApp')) {
     function __setupApp($serverName = null) {
@@ -25,12 +28,14 @@ if (!function_exists('__setupApp')) {
         $config->setProtected('basePath', BASE_PATH);
 
         setCommonConfig($config, $serverName);
-        setUniqueConfig($config, $serverName);
+        if (defined('setUniqueConfig')) {
+            setUniqueConfig($config, $serverName);
+        }
         return new \App\Application($config);
     }
 }
 
-// todo: Error shows partial backtrace.
+// todo: Error shows partial backtrace. Need to find a way to show all backtrace!
 if (!function_exists('errorHandler')) {
 
     function errorHandler($error_level, $error_message, $error_file, $error_line, $error_context)
