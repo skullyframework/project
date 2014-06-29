@@ -82,16 +82,19 @@ class Application extends \Skully\Application {
      */
     protected function mergeSettingsToConfig() {
         try {
-            $settings = R::findAll('setting');
-            if (!empty($settings)) {
-                foreach($settings as $setting) {
-                    $value = $setting->value;
-                    settype($value, $setting->type);
-                    if ($setting->is_client) {
-                        $this->config->setPublic($setting->name, $value);
-                    }
-                    else {
-                        $this->config->setProtected($setting->name, $value);
+            $dbConfig = $this->getConfigObject()->getProtected('dbConfig');
+            if (!empty($dbConfig)) {
+                $settings = R::findAll('setting');
+                if (!empty($settings)) {
+                    foreach($settings as $setting) {
+                        $value = $setting->value;
+                        settype($value, $setting->type);
+                        if ($setting->is_client) {
+                            $this->config->setPublic($setting->name, $value);
+                        }
+                        else {
+                            $this->config->setProtected($setting->name, $value);
+                        }
                     }
                 }
             }

@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "693fc93a715886825b5c54a1e9a44721",
+    "hash": "d111eb4a117e591b3a2ea7c4c253ae6a",
     "packages": [
         {
             "name": "phpmailer/phpmailer",
@@ -118,18 +118,70 @@
             "time": "2014-03-20 16:52:12"
         },
         {
-            "name": "symfony/console",
+            "name": "skullyframework/skully",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/skullyframework/skully.git",
+                "reference": "f1c829c07ae53fb25e85bba4f952c554b94702e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/skullyframework/skully/zipball/f1c829c07ae53fb25e85bba4f952c554b94702e0",
+                "reference": "f1c829c07ae53fb25e85bba4f952c554b94702e0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "ruckusing/ruckusing-migrations": "dev-master",
+                "symfony/console": "2.5.x-dev"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "v1.2.0",
+                "phpunit/dbunit": ">=1.2",
+                "phpunit/phpunit": "3.7.28",
+                "phpunit/phpunit-selenium": ">=1.2"
+            },
+            "suggest": {
+                "ext-runkit": "For using the runkit API."
+            },
+            "type": "package",
+            "autoload": {
+                "psr-0": {
+                    "Skully\\": "",
+                    "RedBeanPHP\\": "Skully/Library/redbean"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Jay",
+                    "email": "jay@tgitriodesign.com"
+                },
+                {
+                    "name": "Bobby",
+                    "email": "bobby@tgitriodesign.com"
+                }
+            ],
+            "description": "Simple framework by trio digital agency.",
+            "time": "2014-06-29 11:15:48"
+        },
+        {
+            "name": "symfony/console",
+            "version": "2.5.x-dev",
             "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "50be4f30d0a93404e5d62b05fd7294492cf64c4f"
+                "reference": "5643ea04872456a975ca2101337a45ba7187d00a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/50be4f30d0a93404e5d62b05fd7294492cf64c4f",
-                "reference": "50be4f30d0a93404e5d62b05fd7294492cf64c4f",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/5643ea04872456a975ca2101337a45ba7187d00a",
+                "reference": "5643ea04872456a975ca2101337a45ba7187d00a",
                 "shasum": ""
             },
             "require": {
@@ -172,62 +224,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-05-15 08:56:35"
-        },
-        {
-            "name": "triodigital/skully",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/triodigital/skully.git",
-                "reference": "df372142b096f6ec67ce8ec0c26229a74f352cb3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/triodigital/skully/zipball/df372142b096f6ec67ce8ec0c26229a74f352cb3",
-                "reference": "df372142b096f6ec67ce8ec0c26229a74f352cb3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4",
-                "ruckusing/ruckusing-migrations": "dev-master",
-                "symfony/console": "2.5.x-dev"
-            },
-            "require-dev": {
-                "mikey179/vfsstream": "v1.2.0",
-                "phpunit/dbunit": ">=1.2",
-                "phpunit/phpunit": "3.7.28",
-                "phpunit/phpunit-selenium": ">=1.2"
-            },
-            "suggest": {
-                "ext-runkit": "For using the runkit API."
-            },
-            "type": "package",
-            "autoload": {
-                "psr-0": {
-                    "Skully\\": "",
-                    "RedBeanPHP\\": "Skully/Library/redbean"
-                }
-            },
-            "license": [
-                "LGPL-2.1"
-            ],
-            "authors": [
-                {
-                    "name": "Jay",
-                    "email": "jay@tgitriodesign.com"
-                },
-                {
-                    "name": "Bobby",
-                    "email": "bobby@tgitriodesign.com"
-                }
-            ],
-            "description": "Simple framework by trio digital agency.",
-            "support": {
-                "source": "https://github.com/triodigital/skully/tree/master",
-                "issues": "https://github.com/triodigital/skully/issues"
-            },
-            "time": "2014-05-18 02:38:58"
+            "time": "2014-06-20 17:38:20"
         }
     ],
     "packages-dev": [
@@ -267,12 +264,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/dbunit.git",
-                "reference": "a5891b7a9c4f21587a51f9bc4e8f7042b741b480"
+                "reference": "4c70e8fe3dbc86e9eb3a711fad518a9f9d402f42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/dbunit/zipball/a5891b7a9c4f21587a51f9bc4e8f7042b741b480",
-                "reference": "a5891b7a9c4f21587a51f9bc4e8f7042b741b480",
+                "url": "https://api.github.com/repos/sebastianbergmann/dbunit/zipball/4c70e8fe3dbc86e9eb3a711fad518a9f9d402f42",
+                "reference": "4c70e8fe3dbc86e9eb3a711fad518a9f9d402f42",
                 "shasum": ""
             },
             "require": {
@@ -318,7 +315,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-03-26 11:25:06"
+            "time": "2014-06-23 12:53:16"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -326,12 +323,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "6ef2bf3a1c47eca07ea95f0d8a902a6340390b34"
+                "reference": "61fed79803b6c75d461b909dfac05bbef5cd4f46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/6ef2bf3a1c47eca07ea95f0d8a902a6340390b34",
-                "reference": "6ef2bf3a1c47eca07ea95f0d8a902a6340390b34",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/61fed79803b6c75d461b909dfac05bbef5cd4f46",
+                "reference": "61fed79803b6c75d461b909dfac05bbef5cd4f46",
                 "shasum": ""
             },
             "require": {
@@ -379,7 +376,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-03-28 10:53:45"
+            "time": "2014-05-19 01:58:57"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -520,12 +517,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "955c24b708f8bfd6a05f303217a8dac3a443d531"
+                "reference": "a0802561692c3b2bb0ed972f7ffafbfab068e580"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/955c24b708f8bfd6a05f303217a8dac3a443d531",
-                "reference": "955c24b708f8bfd6a05f303217a8dac3a443d531",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/a0802561692c3b2bb0ed972f7ffafbfab068e580",
+                "reference": "a0802561692c3b2bb0ed972f7ffafbfab068e580",
                 "shasum": ""
             },
             "require": {
@@ -562,7 +559,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2014-05-12 05:34:42"
+            "time": "2014-06-26 07:15:38"
         },
         {
             "name": "phpunit/phpunit",
@@ -701,19 +698,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-selenium.git",
-                "reference": "a7401a04755dce41332a450b7111dd610caa3ace"
+                "reference": "ed9fc2a0df26ad804703877b0538e825079283fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-selenium/zipball/a7401a04755dce41332a450b7111dd610caa3ace",
-                "reference": "a7401a04755dce41332a450b7111dd610caa3ace",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-selenium/zipball/ed9fc2a0df26ad804703877b0538e825079283fa",
+                "reference": "ed9fc2a0df26ad804703877b0538e825079283fa",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "ext-dom": "*",
                 "php": ">=5.3.3",
-                "phpunit/phpunit": ">=3.7.0@stable"
+                "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
             "autoload": {
@@ -747,7 +744,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-02-23 17:48:10"
+            "time": "2014-06-28 09:16:10"
         },
         {
             "name": "symfony/yaml",
@@ -756,12 +753,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "2158ca824145bd01877f58c987aff828bccddefa"
+                "reference": "a0e90f173c33a57bfbb5561793d25864182239ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/2158ca824145bd01877f58c987aff828bccddefa",
-                "reference": "2158ca824145bd01877f58c987aff828bccddefa",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/a0e90f173c33a57bfbb5561793d25864182239ad",
+                "reference": "a0e90f173c33a57bfbb5561793d25864182239ad",
                 "shasum": ""
             },
             "require": {
@@ -770,7 +767,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5-dev"
+                    "dev-master": "2.6-dev"
                 }
             },
             "autoload": {
@@ -796,7 +793,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-05-16 14:25:18"
+            "time": "2014-06-20 17:41:51"
         }
     ],
     "aliases": [
@@ -804,7 +801,7 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "triodigital/skully": 20
+        "skullyframework/skully": 20
     },
     "platform": [
 

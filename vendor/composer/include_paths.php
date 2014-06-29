@@ -12,9 +12,9 @@ return array(
     $vendorDir . '/phpunit/php-timer',
     $vendorDir . '/phpunit/phpunit',
     $vendorDir . '/symfony/yaml',
-    $vendorDir . '/phpunit/phpunit-selenium',
     $vendorDir . '/phpunit/php-code-coverage',
+    $vendorDir . '/phpunit/phpunit-selenium',
+    $vendorDir . '/phpunit/php-token-stream',
     $vendorDir . '/phpunit/dbunit',
     $vendorDir . '/symfony/yaml',
-    $vendorDir . '/phpunit/php-token-stream',
 );
