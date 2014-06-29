@@ -1,5 +1,5 @@
 {
-    "name": "triodigital/skully-project",
+    "name": "skullyframework/project",
     "description": "Skully Project",
     "minimum-stability": "dev",
     "require-dev": {
@@ -10,7 +10,7 @@
     },
     "require": {
         "phpmailer/phpmailer": "v5.2.7",
-        "triodigital/skully": "dev-master"
+        "skullyframework/skully": "dev-master"
     },
     "autoload": {
         "psr-0": {
@@ -19,10 +19,6 @@
         }
     },
     "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/triodigital/skully"
-        },
         {
             "type": "vcs",
             "url": "https://github.com/jaycode/ruckusing-migrations"
