@@ -8,4 +8,4 @@ App/smarty/cache/*
 tools/dbmigrator/logs/*
 .idea
 composer.lock
-vendor/composer/*
+vendor
