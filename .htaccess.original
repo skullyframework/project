@@ -5,7 +5,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule "^(.*)$" "index.php?_url=$1" [QSA,L]
 RewriteRule /*\.(css|js|gif|png|jpe?g|ico|swf|csv|html|xlsx|xls|xml)$ - [NC,L]
-AddType application/x-httpd-php .php
 
 # redirect www.sitename.com to sitename.com
 #RewriteCond %{HTTP_HOST} \.
