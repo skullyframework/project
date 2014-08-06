@@ -19,7 +19,10 @@ function setUniqueConfig(Config &$config, $serverName = null) {
                 'password'	=> 'oisadj',
                 'port'		=> '3306',
                 'dbname'	=> 'skully',
-                'charset'   => 'utf8'
+                'charset'   => 'utf8',
+                // The following is added so when we migrate, get data from "skully"
+                // directory, instead of "online_database" directory.
+                'directory' => 'skully'
             ),
         );
     }
@@ -36,7 +39,10 @@ function setUniqueConfig(Config &$config, $serverName = null) {
                 'password'	=> 'oisadj',
                 'port'		=> '3306',
                 'dbname'	=> 'skullyTest',
-                'charset'   => 'utf8'
+                'charset'   => 'utf8',
+                // The following is added so when we migrate, get data from "skully"
+                // directory, instead of "online_database" directory.
+                'directory' => 'skully'
             ),
         );
     }
