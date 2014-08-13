@@ -5,12 +5,10 @@ namespace App;
 use App\Controllers\BaseController;
 use RedBeanPHP\Facade as R;
 use Skully\Core\ConfigInterface;
-use Skully\Core\Templating\SmartyAdapter;
 use Skully\Exceptions\InvalidConfigException;
 
 
 class Application extends \Skully\Application {
-
     //facebook
     private $_fb = null;
     private $_fbLoginUrl = '';

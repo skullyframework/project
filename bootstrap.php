@@ -28,7 +28,7 @@ if (!function_exists('__setupApp')) {
         $config->setProtected('basePath', BASE_PATH);
 
         setCommonConfig($config, $serverName);
-        if (defined('setUniqueConfig')) {
+        if (function_exists('setUniqueConfig')) {
             setUniqueConfig($config, $serverName);
         }
         return new \App\Application($config);

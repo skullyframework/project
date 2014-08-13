@@ -3,8 +3,9 @@ config/config.unique.php
 logs/*
 public/default/resources/scss/.sass-cache/*
 App/smarty/templates_c/*
-vendor/composer/installed.json
 /.htaccess
 App/smarty/cache/*
 tools/dbmigrator/logs/*
 .idea
+composer.lock
+vendor

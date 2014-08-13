@@ -1,1 +1,3 @@
-chmod 755 /home/skullyba/public_html/index.php
+chmod 755 index.php
+chmod 755 console
+chmod 755 composer.phar

@@ -1,51 +1,64 @@
 <?php
-
-
 date_default_timezone_set('Asia/Jakarta');
 
 use App\Config\Config;
 
 function setUniqueConfig(Config &$config, $serverName = null) {
-    if(empty($serverName)) $serverName = $_SERVER["SERVER_NAME"];
+    if(empty($serverName) && isset($_SERVER["SERVER_NAME"])) $serverName = $_SERVER["SERVER_NAME"];
 
     if ($serverName == 'localhost') {
+        /**
+         * LOCALHOST
+         */
         $config_r=array(
             'serverName' => $serverName,
-            "dbConfig" => array(
+            'dbConfig' => array(
                 'type' => 'mysql',
-                "host"	    => "127.0.0.1",
-                "user"	    => "root",
-                "password"	=> "oisadj",
-                "port"		=> "3306",
-                "dbname"	=> "donini",
-                'charset'   => 'utf8'
+                'host'	    => '127.0.0.1',
+                'user'	    => 'root',
+                'password'	=> 'oisadj',
+                'port'		=> '3306',
+                'dbname'	=> 'skully',
+                'charset'   => 'utf8',
+                // The following is added so when we migrate, get data from "skully"
+                // directory, instead of "online_database" directory.
+                'directory' => 'skully'
             ),
         );
     }
     elseif ($serverName == 'test') {
+        /**
+         * TEST
+         */
         $config_r=array(
             'serverName' => $serverName,
-            "dbConfig" => array(
+            'dbConfig' => array(
                 'type' => 'mysql',
-                "host"	    => "127.0.0.1",
-                "user"	    => "root",
-                "password"	=> "oisadj",
-                "port"		=> "3306",
-                "dbname"	=> "doniniTest",
-                'charset'   => 'utf8'
+                'host'	    => '127.0.0.1',
+                'user'	    => 'root',
+                'password'	=> 'oisadj',
+                'port'		=> '3306',
+                'dbname'	=> 'skullyTest',
+                'charset'   => 'utf8',
+                // The following is added so when we migrate, get data from "skully"
+                // directory, instead of "online_database" directory.
+                'directory' => 'skully'
             ),
         );
     }
     else {
+        /**
+         * ONLINE
+         */
         $config_r=array(
             'serverName' => $serverName,
-            "dbConfig" => array(
+            'dbConfig' => array(
                 'type' => 'mysql',
-                "host"	    => "localhost",
-                "user"	    => "doniniba_usr",
-                "password"	=> "laiwjd2130",
-                "port"		=> "3306",
-                "dbname"	=> "doniniba_db",
+                'host'	    => 'localhost',
+                'user'	    => 'db',
+                'password'	=> '',
+                'port'		=> '3306',
+                'dbname'	=> 'skully_db',
                 'charset'   => 'utf8'
             )
         );
@@ -59,13 +72,11 @@ function setUniqueConfig(Config &$config, $serverName = null) {
     }
     elseif ($serverName == 'test') {
         $clientAndServerConfig = array(
-             'baseUrl' => 'http://localhost/skully-project/',
-       );
+        );
     }
     else {
         $clientAndServerConfig = array(
-              'baseUrl' => 'http://localhost/skully-project/',
-      );
+        );
     }
     $config->setProtectedFromArray($clientAndServerConfig);
     $config->setPublicFromArray($clientAndServerConfig);
