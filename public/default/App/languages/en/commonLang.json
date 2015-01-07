@@ -11,6 +11,16 @@
     "passwordConfirmationWrong": "Password confirmation must be similar to password.",
     "unknownError": "Unknown Error occurred.",
     "errorFileEmpty": "File is empty.",
+    "errorInvalidFormat" : "Invalid Format. Allowed Format is {$ext}",
+    "errorFilesizeTooBig" : "File size is too big. Allowed File Size is max {$fileSize}MB",
     "imageUploaded": "Image uploaded",
-    "instanceNotFound": "{$model} not found."
+    "instanceNotFound": "{$model} not found.",
+
+    "emailNewPasswordSent" : "Your new password has been sent to your email address.",
+    "userNotFoundOrInvalidActivationKey" : "User not found or invalid activation key.",
+    "adminEmailNewPasswordConfirmationSubject" : "New Password Confirmation for {$websiteName} Administrator Page",
+    "adminEmailNewPasswordSubject" : "New Password for {$websiteName} Administrator Page",
+    "websiteName" : "Skully Admin"
+
+
 }
