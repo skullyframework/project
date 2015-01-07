@@ -2,6 +2,6 @@
 
 Read about Skully Framework [here](http://github.com/skullyframework/skully/wiki).
 
-## Installation
+## Configuring this app
 
-[https://github.com/skullyframework/skully/wiki/2.-Installation](https://github.com/skullyframework/skully/wiki/2.-Installation)
+[https://github.com/skullyframework/skully/wiki/3.-Configure-your-app](https://github.com/skullyframework/skully/wiki/3.-Configure-your-app)

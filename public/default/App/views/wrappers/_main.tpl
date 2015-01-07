@@ -16,7 +16,7 @@
 <body>
 <div class="off-canvas-wrap" data-offcanvas>
     <div class="inner-wrap">
-        <nav class="tab-bar">
+        <nav class="tab-bar show-for-small-only">
             <section class="left-small">
                 <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
             </section>
@@ -30,7 +30,7 @@
             </section>
         </nav>
 
-        <aside class="left-off-canvas-menu">
+        <aside class="left-off-canvas-menu show-for-small-only">
             <ul class="off-canvas-list">
                 <li><label>Home</label></li>
                 <li><a href="#">About Us</a></li>
@@ -38,7 +38,7 @@
             </ul>
         </aside>
 
-        <aside class="right-off-canvas-menu">
+        <aside class="right-off-canvas-menu show-for-small-only">
             <ul class="off-canvas-list">
                 {if $isLoggedIn }
                     <li><a href="{url path="users/logout"}">Log Out</a></li>
@@ -48,6 +48,33 @@
                 {/if}
             </ul>
         </aside>
+
+        <nav class="top-bar" data-topbar role="navigation">
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="{url path="home/index"}">Skully Project</a></h1>
+                </li>
+            </ul>
+            <section class="top-bar-section">
+                <ul class="left">
+                    <li>
+                        <a href="{url path="home/index"}">{lang value='Home'}</a>
+                    </li>
+                    <li>
+                        <a href="{url path="home/index"}">{lang value='User Registration'}</a>
+                    </li>
+                    <li>
+                        <a href="{url path="home/index"}">{lang value='Multi-Language'}</a>
+                    </li>
+                    <li>
+                        <a href="{url path="home/index"}">{lang value='Admin Features'}</a>
+                    </li>
+                    <li>
+                        <a href="{public_url path="https://github.com/skullyframework/skully/wiki"}">{lang value='Admin Features'}</a>
+                    </li>
+                </ul>
+            </section>
+        </nav>
 
         <section class="main-section">
             {block name="content"}{/block}
