@@ -7,5 +7,5 @@ App/smarty/templates_c/*
 App/smarty/cache/*
 tools/dbmigrator/logs/*
 .idea
-composer.lock
+# composer.lock
 vendor
