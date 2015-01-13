@@ -9,3 +9,4 @@ tools/dbmigrator/logs/*
 .idea
 # composer.lock
 vendor
+/vendor/
