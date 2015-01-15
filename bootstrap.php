@@ -13,7 +13,10 @@ use App\Config\Config;
 
 require_once(BASE_PATH . 'globals.php');
 require_once(BASE_PATH . 'config/config.common.php');
+if(empty($serverName) && isset($_SERVER["SERVER_NAME"])) $serverName = $_SERVER["SERVER_NAME"];
+
 $uniqueConfig = BASE_PATH . 'config/config.unique.php';
+
 if (file_exists($uniqueConfig)) {
     require_once($uniqueConfig);
 }

@@ -39,14 +39,50 @@ function setCommonConfig(Config &$config, $serverName = null) {
         );
     }
     else {
+        /**
+         * ONLINE
+         */
+
+        // Heroku database setting
+        // START
+        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+        if (!empty($url)) {
+            $dbHost = $url["host"];
+            $dbUsername = $url["user"];
+            $dbPassword = $url["pass"];
+            $db = substr($url["path"], 1);
+        }
+        else {
+            // Simply update this if you don't use Heroku
+            $dbHost = 'localhost';
+            $dbUsername = 'user';
+            $dbPassword = 'password';
+            $db = 'db_name';
+        }
+        // END
+
         $serverConfigAdd = array(
             'imagecachesPath' => BASE_PATH . 'images/cache/',
             'isDevMode' => false,
-            'logSql' => false
+            'logSql' => false,
+            'serverName' => $serverName,
+            'dbConfig' => array(
+                'type' => 'mysql',
+                'host'	    => $dbHost,
+                'user'	    => $dbUsername,
+                'password'	=> $dbPassword,
+                'port'		=> '3306',
+                'dbname'	=> $db,
+                'charset'   => 'utf8',
+
+                // The following is added so that when we migrate, the app gets data from "skully"
+                // directory instead of "online_database" directory.
+                'directory' => 'skully'
+            )
         );
 
         $clientAndServerConfigAdd = array(
-            'baseUrl' => 'http://onlinesite.com/',
+            'baseUrl' => 'http://skully-project.herokuapp.com/',
             /**
              * Public directory. baseUrl + publicDir is the path to public directory accessible by public.
              * Set to '' for virtual host.

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Configurations that are unique to each installation (e.g. local and test).
+ * Server / production configurations are stored inside config.common.php as
+ * there needs only one of it.
+ */
 date_default_timezone_set('Asia/Jakarta');
 
 use App\Config\Config;
@@ -6,6 +11,7 @@ use App\Config\Config;
 function setUniqueConfig(Config &$config, $serverName = null) {
     if(empty($serverName) && isset($_SERVER["SERVER_NAME"])) $serverName = $_SERVER["SERVER_NAME"];
 
+    $config_r = array();
     if ($serverName == 'localhost') {
         /**
          * LOCALHOST
@@ -19,10 +25,7 @@ function setUniqueConfig(Config &$config, $serverName = null) {
                 'password'	=> 'oisadj',
                 'port'		=> '3306',
                 'dbname'	=> 'skully',
-                'charset'   => 'utf8',
-                // The following is added so when we migrate, get data from "skully"
-                // directory, instead of "online_database" directory.
-                'directory' => 'skully'
+                'charset'   => 'utf8'
             ),
         );
     }
@@ -46,23 +49,7 @@ function setUniqueConfig(Config &$config, $serverName = null) {
             ),
         );
     }
-    else {
-        /**
-         * ONLINE
-         */
-        $config_r=array(
-            'serverName' => $serverName,
-            'dbConfig' => array(
-                'type' => 'mysql',
-                'host'	    => 'localhost',
-                'user'	    => 'db',
-                'password'	=> '',
-                'port'		=> '3306',
-                'dbname'	=> 'skully_db',
-                'charset'   => 'utf8'
-            )
-        );
-    }
+
     $config->setProtectedFromArray($config_r);
 
     if ($serverName == 'localhost') {
