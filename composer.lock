@@ -116,16 +116,16 @@
         },
         {
             "name": "skullyframework/skully",
-            "version": "v0.1.19",
+            "version": "v0.1.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/skullyframework/skully.git",
-                "reference": "c9fba88c8adb439e8acd5c0bd2f127e4207be93c"
+                "reference": "94b50207cda2a758d92bd0d3bc99ba3381b94160"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/skullyframework/skully/zipball/c9fba88c8adb439e8acd5c0bd2f127e4207be93c",
-                "reference": "c9fba88c8adb439e8acd5c0bd2f127e4207be93c",
+                "url": "https://api.github.com/repos/skullyframework/skully/zipball/94b50207cda2a758d92bd0d3bc99ba3381b94160",
+                "reference": "94b50207cda2a758d92bd0d3bc99ba3381b94160",
                 "shasum": ""
             },
             "require": {
@@ -134,13 +134,11 @@
                 "symfony/console": "2.5.*"
             },
             "require-dev": {
+                "antecedent/patchwork": "*",
                 "mikey179/vfsstream": "v1.2.0",
                 "phpunit/dbunit": ">=1.2",
                 "phpunit/phpunit": "3.7.28",
                 "phpunit/phpunit-selenium": ">=1.2"
-            },
-            "suggest": {
-                "ext-runkit": "For using the runkit API."
             },
             "type": "package",
             "autoload": {
@@ -164,7 +162,7 @@
                 }
             ],
             "description": "Simple framework by trio digital agency.",
-            "time": "2015-01-08 04:05:53"
+            "time": "2015-01-16 22:50:30"
         },
         {
             "name": "symfony/console",
