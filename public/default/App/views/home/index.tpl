@@ -2,6 +2,7 @@
 {block name=content}
     <h1>Thank you for using Skully Framework!</h1>
     <p>To get started with creating your website / web app, there are a couple of things you can do:</p>
+    <div>{$dburl}</div>
     <ul>
         <li>
             <b>Setup your database and Base URL.</b>
