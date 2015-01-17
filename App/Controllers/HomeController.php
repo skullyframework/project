@@ -7,10 +7,13 @@
  \------------------------------------------------*/
 namespace App\Controllers;
 
+use Skully\App\Helpers\UrlHelper;
+
 class HomeController extends BaseController
 {
 	public function index(){
         $dburl = parse_url(getenv("CLEARDB_DATABASE_URL"));
-        $this->render('index', array('dburl' => $dburl));
+        $ishttps = UrlHelper::isSecure();
+        $this->render('index', array('dburl' => $dburl, 'ishttps' => $ishttps));
 	}
 }
