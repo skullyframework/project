@@ -8,12 +8,12 @@
 namespace App\Controllers;
 
 use Skully\App\Helpers\UrlHelper;
+use RedBeanPHP\Facade as R;
 
 class HomeController extends BaseController
 {
 	public function index(){
-        $dburl = parse_url(getenv("CLEARDB_DATABASE_URL"));
-        $ishttps = UrlHelper::isSecure();
-        $this->render('index', array('dburl' => $dburl, 'ishttps' => $ishttps));
+        $test = R::findOne('setting', "name = 'test setting'");
+        $this->render('index', array('test' => $test->value));
 	}
 }

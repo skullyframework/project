@@ -1,6 +1,7 @@
 {extends file="wrappers/_main.tpl"}
 {block name=content}
     <h1>Thank you for using Skully Framework!</h1>
+    <p>{$test}</p>
     <p>To get started with creating your website / web app, there are a couple of things you can do:</p>
     <ul>
         <li>

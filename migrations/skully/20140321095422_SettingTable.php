@@ -1,5 +1,7 @@
 <?php
 
+use RedBeanPHP\Facade as R;
+
 class SettingTable extends Ruckusing_Migration_Base
 {
     public function up()
@@ -15,6 +17,10 @@ class SettingTable extends Ruckusing_Migration_Base
         $t->column('info', 'text');
         $t->column('is_visible', 'boolean', array('default' => true));
         $t->finish();
+
+        $app = __setupApp();
+        $sampleSetting = $app->createModel('setting', array('name' => 'test setting', 'value' => 'This is a test setting to demonstrate value retrieval from database.'));
+        R::store($sampleSetting);
     }//up()
 
     public function down()
