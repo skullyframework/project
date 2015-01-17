@@ -1,3 +1,7 @@
+# Heroku App
+
+To push, do git push heroku heroku:master
+
 # Skully Project - A skeleton project for [Skully Framework](http://github.com/skullyframework/skully)
 
 Read about Skully Framework [here](http://github.com/skullyframework/skully/wiki).

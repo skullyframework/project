@@ -116,16 +116,16 @@
         },
         {
             "name": "skullyframework/skully",
-            "version": "v0.1.21",
+            "version": "v0.1.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/skullyframework/skully.git",
-                "reference": "94b50207cda2a758d92bd0d3bc99ba3381b94160"
+                "reference": "fa1a0c7f2d00b0bab5f2017f4a975c08bc47080c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/skullyframework/skully/zipball/94b50207cda2a758d92bd0d3bc99ba3381b94160",
-                "reference": "94b50207cda2a758d92bd0d3bc99ba3381b94160",
+                "url": "https://api.github.com/repos/skullyframework/skully/zipball/fa1a0c7f2d00b0bab5f2017f4a975c08bc47080c",
+                "reference": "fa1a0c7f2d00b0bab5f2017f4a975c08bc47080c",
                 "shasum": ""
             },
             "require": {
@@ -162,7 +162,7 @@
                 }
             ],
             "description": "Simple framework by trio digital agency.",
-            "time": "2015-01-16 22:50:30"
+            "time": "2015-01-17 01:42:51"
         },
         {
             "name": "symfony/console",
