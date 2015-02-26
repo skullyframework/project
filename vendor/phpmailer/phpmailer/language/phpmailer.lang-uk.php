@@ -1,5 +1,8 @@
 <?php
-
+/**
+* PHPMailer language file: refer to English translation for definitive list
+* Ukrainian Version by Yuriy Rudyy <yrudyy@prs.net.ua>
+*/
 
 $PHPMAILER_LANG['authenticate']         = 'Помилка SMTP: помилка авторизації.';
 $PHPMAILER_LANG['connect_host']         = 'Помилка SMTP: не вдається підєднатися до серверу SMTP.';

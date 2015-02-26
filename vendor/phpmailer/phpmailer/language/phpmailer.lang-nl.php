@@ -1,5 +1,8 @@
 <?php
-
+/**
+* PHPMailer language file: refer to class.phpmailer.php for definitive list.
+* Dutch Version by Tuxion <team@tuxion.nl>
+*/
 
 $PHPMAILER_LANG['authenticate']         = 'SMTP-fout: authenticatie mislukt.';//SMTP Error: Could not authenticate.
 $PHPMAILER_LANG['connect_host']         = 'SMTP-fout: kon niet verbinden met SMTP-host.';//SMTP Error: Could not connect to SMTP host.

@@ -1,5 +1,9 @@
 <?php
-
+/**
+* PHPMailer language file: refer to English translation for definitive list
+* Persian/Farsi Version, UTF-8
+* By: Ali Jazayeri <jaza.ali@gmail.com>
+*/
 
 $PHPMAILER_LANG['authenticate']         = 'SMTP Error: احراز هویت با شکست مواجه شد.';
 $PHPMAILER_LANG['connect_host']         = 'SMTP Error: اتصال به سرور SMTP برقرار نشد.';

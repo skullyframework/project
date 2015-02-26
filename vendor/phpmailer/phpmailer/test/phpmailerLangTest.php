@@ -1,5 +1,16 @@
 <?php
-
+/**
+ * PHPMailer - language file tests
+ * Before running these tests you need to install PHPUnit 3.3 or later through pear, like this:
+ *   pear install "channel://pear.phpunit.de/PHPUnit"
+ * Then run the tests like this:
+ *   phpunit phpmailerLangTest
+ * @package PHPMailer
+ * @author Andy Prevost
+ * @author Marcus Bointon
+ * @copyright 2004 - 2009 Andy Prevost
+ * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
+ */
 
 require 'PHPUnit/Autoload.php';
 

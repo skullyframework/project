@@ -1,5 +1,8 @@
 <?php
-
+/**
+* PHPMailer language file: refer to English translation for definitive list
+* Lithuanian version by Dainius Kaupaitis <dk@sum.lt>
+*/
 
 $PHPMAILER_LANG['authenticate']         = 'SMTP klaida: autentifikacija nepavyko.';
 $PHPMAILER_LANG['connect_host']         = 'SMTP klaida: nepavyksta prisijungti prie SMTP stoties.';
