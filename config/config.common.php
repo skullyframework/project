@@ -164,6 +164,10 @@ function setCommonConfig(Config &$config, $serverName = null) {
             'db_dir' => BASE_PATH . 'db',
             'log_dir' => BASE_PATH . 'logs' . DIRECTORY_SEPARATOR . 'migrations',
             'ruckusing_base' => RUCKUSING_BASE
+        ),
+        // Additional command classes to be added to console application.
+        'additionalCommands' => array(
+//            '\SkullyAwsS3\Commands\S3Command'
         )
     ), $serverConfigAdd);
 
