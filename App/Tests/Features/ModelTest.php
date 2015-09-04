@@ -16,11 +16,10 @@ class ModelTest extends DatabaseTestCase {
      * Cant have camelcased beans
      * @expectedException \RedBeanPHP\RedException
      */
-    public function testTwoWordsCamelcasedBean()
-    {
+    public function testTwoWordsCamelcasedBean() {
         R::freeze(false);
-        $testName = R::dispense('testName');
-        $id = R::store($testName);
+        $testName   = R::dispense('testName');
+        $id         = R::store($testName);
         R::load('testName', $id);
         R::freeze($this->frozen);
     }
@@ -29,11 +28,10 @@ class ModelTest extends DatabaseTestCase {
      * Cant have underscored beans
      * @expectedException \RedBeanPHP\RedException
      */
-    public function testTwoWordsUnderscoredBean()
-    {
+    public function testTwoWordsUnderscoredBean()  {
         R::freeze(false);
-        $testName = R::dispense('test_name');
-        $id = R::store($testName);
+        $testName   = R::dispense('test_name');
+        $id         = R::store($testName);
         R::load('test_name', $id);
         R::freeze($this->frozen);
     }

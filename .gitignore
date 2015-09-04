@@ -1,11 +1,10 @@
 .DS_STORE
+.htaccess
+.idea
+App/smarty/cache/*
+App/smarty/templates_c/*
 config/config.unique.php
 logs/*
 public/default/resources/scss/.sass-cache/*
-App/smarty/templates_c/*
-/.htaccess
-App/smarty/cache/*
 tools/dbmigrator/logs/*
-.idea
-composer.lock
-vendor
+vendor/*

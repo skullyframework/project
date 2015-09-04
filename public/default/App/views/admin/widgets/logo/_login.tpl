@@ -1,0 +1,1 @@
+<img src="{theme_url path="resources/images/admin/logo-100.png"}" alt="logo" data-src="{theme_url path="resources/images/admin/logo-100.png"}" data-src-retina="{theme_url path="resources/images/admin/logo-200.png"}" width="82" height="100">

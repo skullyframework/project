@@ -20,8 +20,7 @@ abstract class DatabaseTestCase extends \PHPUnit_Framework_TestCase{
 
     static $connection;
 
-    protected function setUp()
-    {
+    protected function setUp() {
         $config = new Config();
         $config->setProtected('basePath', BASE_PATH);
 
@@ -33,13 +32,13 @@ abstract class DatabaseTestCase extends \PHPUnit_Framework_TestCase{
         if ($dbConfig['type'] == 'mysql') {
             Application::setupRedBean("mysql:host={$dbConfig['host']};dbname={$dbConfig['dbname']};port={$dbConfig['port']}", $dbConfig['user'], $dbConfig['password'], $config->getProtected('isDevMode'));
         }
-        elseif ($dbConfig['type'] == 'sqlite') {
+        else if ($dbConfig['type'] == 'sqlite') {
             Application::setupRedBean("sqlite:{$dbConfig['dbname']}", $dbConfig['user'], $dbConfig['password'], $config->getProtected('isDevMode'));
         }
 
-        R::freeze(false);
-        R::nuke();
-        R::freeze($this->frozen);
+//        R::freeze(false);
+//        R::nuke();
+//        R::freeze($this->frozen);
 
         $this->app = __setupApp();
 
@@ -51,11 +50,10 @@ abstract class DatabaseTestCase extends \PHPUnit_Framework_TestCase{
         $this->app->setHttp($http);
     }
 
-    protected function migrate()
-    {
+    protected function migrate() {
         ob_start();
         $console = new Console($this->app, true);
-        $output = $console->run("skully:schema db:migrate test");
+        $console->run("skully:schema db:migrate test");
         ob_clean();
     }
 

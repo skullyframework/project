@@ -7,25 +7,22 @@ use Skully\App\Models\Traits\Authorizable;
 use Skully\App\Models\Traits\HasTimestamp;
 
 class Admin extends BaseModel {
-    const STATUS_ACTIVE = 'active';
-    const STATUS_INACTIVE = 'inactive';
+    const TYPE_ADMIN        = 'admin';
+    const STATUS_ACTIVE     = 'active';
+    const STATUS_INACTIVE   = 'inactive';
 
-    use Authorizable {
-        beforeSave as aBeforeSave;
+    use Authorizable, HasTimestamp {
+        Authorizable::beforeSave as aBeforeSave;
+        HasTimestamp::beforeSave as tsBeforeSave;
     }
 
-    use HasTimestamp {
-        beforeSave as tsBeforeSave;
-    }
-
-    public function beforeSave()
-    {
+    public function beforeSave() {
         $this->aBeforeSave();
         $this->tsBeforeSave();
         parent::beforeSave();
     }
-    public function validatesExistenceOf()
-    {
+
+    public function validatesExistenceOf() {
         return array('name', 'email');
     }
 }

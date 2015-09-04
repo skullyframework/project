@@ -7,9 +7,13 @@
  \------------------------------------------------*/
 namespace App\Controllers;
 
+use Skully\App\Helpers\UrlHelper;
+use RedBeanPHP\Facade as R;
+
 class HomeController extends BaseController
 {
 	public function index(){
-        $this->render('index');
+        $test = R::findOne('setting', "name = 'test setting'");
+        $this->render('index', array('test' => $test->value));
 	}
 }

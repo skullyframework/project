@@ -2,10 +2,14 @@
 <phpunit>
     <testsuites>
         <testsuite name="App_Tests">
-            <file>ApplicationTest.php</file>
-            <file>Controllers/BaseControllerTest.php</file>
-            <file>Controllers/HomeControllerTest.php</file>
-            <file>Features/ModelTest.php</file>
+            <!-- First Load !-->
+            <file>DatabasePreparationTest.php</file>
+
+            <!-- Others !-->
+            <!--<file>ApplicationTest.php</file>-->
+            <!--<file>Controllers/BaseControllerTest.php</file>-->
+            <!--<file>Controllers/HomeControllerTest.php</file>-->
+            <!--<file>Features/ModelTest.php</file>-->
         </testsuite>
     </testsuites>
 </phpunit>

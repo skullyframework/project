@@ -6,9 +6,13 @@ use App\Controllers\BaseController;
 use RedBeanPHP\Facade as R;
 use Skully\Core\ConfigInterface;
 use Skully\Exceptions\InvalidConfigException;
+use SkullyAdmin\AdminTrait;
+use SkullyLang\SkullyLangTrait;
 
 
 class Application extends \Skully\Application {
+    use AdminTrait, SkullyLangTrait;
+
     //facebook
     private $_fb = null;
     private $_fbLoginUrl = '';
@@ -100,5 +104,11 @@ class Application extends \Skully\Application {
         catch (\Exception $e) {
 
         }
+    }
+
+    protected function setupTheme() {
+        parent::setupTheme();
+        $this->addAdminTemplateDir();
+        $this->addLangTemplateDir();
     }
 }

@@ -10,13 +10,17 @@
         "mikey179/vfsStream": "v1.2.0"
     },
     "require": {
+        "ext-mbstring": "*",
         "phpmailer/phpmailer": "v5.2.7",
-        "skullyframework/skully": "0.1.*"
+        "skullyframework/skully": "0.1.*",
+		"skullyframework/skully-admin": "dev-staging",
+        "skullyframework/skully-lang": "dev-staging"
     },
     "autoload": {
         "psr-0": {
             "App\\": "",
-            "HtmlPlainText" : "library/htmlPlainText"
+            "HtmlPlainText" : "library/htmlPlainText",
+			"SkullyLang": "vendor/skullyframework/skully-lang/"
         }
     },
     "license": "MIT"

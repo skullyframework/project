@@ -18,5 +18,8 @@ $app = __setupApp($serverName);
 
 use Skully\Console\Console;
 $consoleApp = new Console($app);
+
+$consoleApp->addCommands($app->config('additionalCommands'));
+
 array_shift($argv);
 $consoleApp->run(implode(' ', $argv));
