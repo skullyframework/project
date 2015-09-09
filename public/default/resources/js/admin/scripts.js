@@ -75,6 +75,17 @@ function hideLoading() {
     $('body').removeClass("loading");
 }
 
+function notify(message, type){
+    if(!type) type = "info";
+    $('body').pgNotification({
+        style: 'flip',
+        message: message,
+        position: "top-right",
+        timeout: 5000,
+        type: type
+    }).show();
+}
+
 //return string of formatted number
 Number.prototype.numberFormat = function(dec, decimalSeparator, thousandSeparator ) {
     var number = this;
@@ -211,7 +222,15 @@ String.prototype.numberFormat = Number.prototype.numberFormat; //enable number f
                     format: _config.formDateFormat,
                     todayBtn: "linked",
                     todayHighlight: true
-                });
+                }).each(function(){
+                        var $this = $(this);
+                        var val = $this.val();
+                        if(val != ""){
+                            $this.val("");
+                            $this.datepicker( 'setDate', new Date( val ) );
+                        }
+                    });
+
             }
 
             if($("input.birthdatepicker").length > 0){
@@ -289,7 +308,7 @@ String.prototype.numberFormat = Number.prototype.numberFormat; //enable number f
             setTimeout(function() {
                 $('.wysihtml5').not('.wysihtml5Initialized').addClass("wysihtml5Initialized").wysihtml5({
                     html: true,
-                    stylesheets: [_config.themeUrl + "resources/css/admin/editor.css"],
+                    stylesheets: [_config.baseUrl + _config.publicDir + _config.theme + "/resources/css/admin/editor.css"],
                     customTemplates: myCustomTemplates
                 });
             }, 500);
