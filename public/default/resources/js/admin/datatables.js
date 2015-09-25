@@ -97,7 +97,8 @@
                                             id: ui.item.oldId
                                         }
                                     });
-                                    $('#datatable-media').DataTable().draw(false);
+                                    $._oTable.ajax.reload(null, false);
+                                    //$('#datatable-media').DataTable().draw(false);
                                 }
                             });
                             table.find("tbody").disableSelection();
